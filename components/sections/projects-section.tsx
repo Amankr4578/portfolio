@@ -173,7 +173,7 @@ export function ProjectsSection() {
         className="text-center px-4 sm:px-6"
       >
         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-          Featured Projects
+          Projects
         </h2>
         <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
           A showcase of my recent work, demonstrating my expertise in full-stack development.

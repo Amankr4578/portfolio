@@ -14,49 +14,49 @@ const certifications = [
     title: "Oracle Certified Professional Java SE 17 Developer",
     issuer: "Oracle",
     date: "Issued November 2025",
-    logo: "/logos/aws.svg",
+    logo: "/logos/oracle.jpg",
     link: "https://drive.google.com/file/d/15DcRo8rC7-V6j3Wt__baJscBmUzsmHZw/view",
-    description: "Professional certification validating core Java skills"
+    description: "Advanced certification demonstrating expertise in modern Java development and SE 17 features"
   },
   {
-    title: "MongoDB Associate Developer",
+    title: "MongoDB Associate Developer - PHP Programming",
     issuer: "MongoDB",
     date: "Issued February 2026",
-    logo: "/public/aws-logo.svg",
+    logo: "/logos/mongodb.jpg",
     link: "https://www.credly.com/badges/e0a634cf-0741-4077-83ca-778316f146e4/print",
-    description: "Foundational MongoDb Certification"
-  },
-  {
-    title: "CS50 - Python ",
-    issuer: "Harvard University",
-    date: "Issued 2026",
-    logo: "/public/aws-logo.svg",
-    link: "https://certificates.cs50.io/23d52fe1-af8e-42ff-abdf-dced63eb8c24.pdf?size=letter",
-    description: "Foundational Python Certification"
+    description: "Professional credential validating NoSQL database design and MongoDB application development"
   },
   {
     title: "Oracle Certified Professional Oracle Linux 8 System Administrator",
     issuer: "Oracle",
     date: "Issued December 2025",
-    logo: "/public/cncf-logo.svg",
+    logo: "/logos/oracle.jpg",
     link: "https://drive.google.com/file/d/1Uwq3ihxUi5ZyZRf9QyUmoLBqyFPLf4Q7/view",
-    description: "Professional Linux Certification"
+    description: "Advanced credential for Oracle Linux system administration and server management"
+  },
+  {
+    title: "CS50 - Python ",
+    issuer: "Harvard University",
+    date: "Issued 2026",
+    logo: "/logos/harvard.jpg",
+    link: "https://certificates.cs50.io/23d52fe1-af8e-42ff-abdf-dced63eb8c24.pdf?size=letter",
+    description: "Harvard's introduction to computer science and Python programming fundamentals"
   },
   {
     title: "Cloud Computing",
     issuer: "NPTEL",
     date: "Issued April 2025",
-    logo: "/public/cncf-logo.svg",
+    logo: "/logos/nptel.jpg",
     link: "https://archive.nptel.ac.in/noc/Ecertificate/?q=NPTEL25CS11S143730155104239448",
-    description: "Foundational Cloud Certification"
+    description: "Comprehensive course on cloud computing concepts, services, and infrastructure"
   },
   {
     title: "DSA Training",
     issuer: "Programming Pathshala",
     date: "Issued August 2025",
-    logo: "/public/cncf-logo.svg",
+    logo: "/logos/prog.png",
     link: "https://certificates.programmingpathshala.com/v2/doc?id=1b4ede7bb48456e0e3f6ffb7b93cdd1415c6480aa4142b50d7ac9113266b559a",
-    description: "Foundational DSA Certification"
+    description: "Intensive training in data structures, algorithms, and competitive programming techniques"
   }
 ]
 
@@ -89,7 +89,7 @@ export function CertificationsSection() {
         </motion.p>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {certifications.map((cert, index) => (
           <motion.div
             key={cert.title}
@@ -100,7 +100,7 @@ export function CertificationsSection() {
           >
             <Card className="group h-full hover:shadow-lg transition-all duration-300 border-primary/10 bg-card/50 backdrop-blur-sm overflow-hidden">
               <CardHeader className="pb-3">
-                <div className="relative h-16 w-16 mx-auto mb-4 flex-shrink-0">
+              <div className="relative h-20 w-20 mx-auto mb-6 flex-shrink-0">
                   <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-primary/20 rounded-xl blur-sm group-hover:opacity-100 opacity-50 transition-opacity" />
                   <Image
                     src={cert.logo}
@@ -110,11 +110,11 @@ export function CertificationsSection() {
                     sizes="64px"
                   />
                 </div>
-                <CardTitle className="text-lg font-semibold text-center group-hover:text-primary transition-colors truncate">
+                <CardTitle className="text-xl font-semibold text-center group-hover:text-primary transition-colors leading-tight">
                   {cert.title}
                 </CardTitle>
               </CardHeader>
-              <CardContent className="space-y-3 pt-0">
+              <CardContent className="space-y-4 pt-1 min-h-[140px]">
                 <div className="flex items-center gap-2 justify-center mb-3">
                   <div className="p-1.5 bg-primary/10 rounded-lg">
                     <Award className="h-4 w-4 text-primary" />

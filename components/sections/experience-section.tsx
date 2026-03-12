@@ -24,11 +24,11 @@ const experiences = [
       "Tech: React.js, Node.js, MongoDB, Express.js, REST API"
     ],
     logo: "/logos/wsa.jpg",
-    logoAlt: "Jio Logo",
+    logoAlt: "Webstack Logo",
     metrics: [
-      { label: "Accuracy", value: "97%", icon: <Target className="h-3 w-3" /> },
-      { label: "Records Processed", value: "50k+", icon: <TrendingUp className="h-3 w-3" /> },
-      { label: "NL2SQL engine response + execution time", value: "<7 Seconds", icon: <Zap className="h-3 w-3" /> }
+      { label: "APIs Created", value: "10+", icon: <TrendingUp className="h-3 w-3" /> },
+      { label: "Response Time Reduced", value: "25%", icon: <Zap className="h-3 w-3" /> },
+      { label: "Production Issues Fixed", value: "5+", icon: <Target className="h-3 w-3" /> }
     ]
   },
   {
@@ -45,11 +45,11 @@ const experiences = [
       "Tech: WordPress, React.js, Node.js, MongoDB, Express.js, PHP, UI/UX, Plugin Integration"
     ],
     logo: "/logos/vanillakart.png",
-    logoAlt: "BSSK Logo",
+    logoAlt: "Vanillakart Logo",
     metrics: [
-      { label: "Lighthouse Score", value: "90+", icon: <Target className="h-3 w-3" /> },
-      { label: "Performance Gain", value: "60%", icon: <TrendingUp className="h-3 w-3" /> },
-      { label: "Accessibility", value: "100%", icon: <Zap className="h-3 w-3" /> }
+      { label: "Client Websites Managed", value: "5+", icon: <Target className="h-3 w-3" /> },
+      { label: "Page Load Time Reduced", value: "20%", icon: <TrendingUp className="h-3 w-3" /> },
+      { label: "Production Issues Resolved", value: "5+", icon: <Zap className="h-3 w-3" /> }
     ]
   }
 ]
@@ -108,7 +108,7 @@ export function ExperienceSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-3xl font-bold tracking-tight sm:text-4xl"
+            className="text-3xl font-bold tracking-tight sm:text-4xl bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent"
           >
             Experience
           </motion.h2>
@@ -293,7 +293,7 @@ export function ExperienceSection() {
           transition={{ delay: 0.3 }}
           className="text-center mt-12"
         >
-          <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full border bg-card/50 backdrop-blur-sm">
+          {/* <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full border bg-card/50 backdrop-blur-sm">
             <Briefcase className="h-4 w-4 text-primary" />
             <span className="text-sm font-medium"><a href="https://www.linkedin.com/in/amankr4578"> Let's connect </a></span>
           </div>
@@ -323,7 +323,7 @@ export function ExperienceSection() {
           >
             Start a Conversation
             <ArrowRight className="h-4 w-4" />
-          </Button>
+          </Button> */}
         </motion.div>
       </div>
     </SectionWrapper>

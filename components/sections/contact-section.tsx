@@ -107,9 +107,9 @@ export function ContactSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-3xl font-bold tracking-tight sm:text-4xl"
+          className="text-3xl font-bold tracking-tight sm:text-4xl bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent"
         >
-          Let's Connect
+          Contact
         </motion.h2>
         <motion.p 
           initial={{ opacity: 0, y: 20 }}
