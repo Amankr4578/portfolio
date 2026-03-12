@@ -1,0 +1,24 @@
+/* Lightweight theme transitions - minimal and performant */
+:root {
+  /* Only transition color properties to avoid layout repaints */
+  transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease;
+}
+
+/* Prevent broad inheritance of transitions */
+*::before,
+*::after {
+  transition: none;
+}
+
+/* Utility to disable animations when needed */
+.disable-animations,
+.disable-animations * {
+  transition: none !important;
+  animation: none !important;
+}
+
+/* Keep SVG color transitions minimal */
+svg,
+svg * {
+  transition: fill 180ms ease, stroke 180ms ease;
+}
