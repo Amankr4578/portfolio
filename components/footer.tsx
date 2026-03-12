@@ -25,7 +25,7 @@ export function Footer() {
     <footer className="py-8 md:px-8 border-t bg-background">
       <div className="container flex flex-col items-center justify-between gap-6 md:flex-row">
         <div className="flex items-center space-x-2">
-          <Cloud className="h-5 w-5 text-primary" />
+          {/* <Cloud className="h-5 w-5 text-primary" /> */}
           <span className="font-semibold">&lt;Aman /&gt;</span>
         </div>
         <p className="text-center text-sm text-muted-foreground md:text-left">

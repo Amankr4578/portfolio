@@ -88,7 +88,7 @@ export function Header() {
           className="group mr-4 sm:mr-6 flex items-center space-x-2"
         >
           <div className="relative">
-            <Cloud className="h-5 w-5 sm:h-6 sm:w-6 text-primary transition-transform duration-300 group-hover:scale-110" />
+            {/* <Cloud className="h-5 w-5 sm:h-6 sm:w-6 text-primary transition-transform duration-300 group-hover:scale-110" /> */}
             <div className="absolute inset-0 bg-primary/10 rounded-full blur-[2px] group-hover:bg-primary/20 transition-all duration-300" />
           </div>
           <span className="hidden font-bold sm:inline-block bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent group-hover:from-foreground/90 group-hover:to-foreground transition-all duration-300">&lt;Aman /&gt;</span>

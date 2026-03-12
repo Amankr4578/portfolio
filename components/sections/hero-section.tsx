@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { useScroll, useTransform, useMotionValue, useSpring, useMotionValueEvent } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Code, Cpu, Cloud, ArrowRight } from "lucide-react"
+import { Github, Linkedin, FileText } from "lucide-react"
 import { useState } from "react"
 import { useEffect } from "react"
 
@@ -128,21 +129,27 @@ export function HeroSection() {
             whileHover={{ scale: 1.05, backgroundColor: "hsl(var(--card))" }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
-            <Code className="h-6 w-6 text-primary" />
+          <motion.a href="https://github.com/amankr4578" target="_blank">
+          <Github className="h-6 w-6 text-primary" />
+          </motion.a>
           </motion.div>
           <motion.div 
             className="rounded-full border bg-card/50 backdrop-blur-sm p-3"
             whileHover={{ scale: 1.05, backgroundColor: "hsl(var(--card))" }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
-            <Cpu className="h-6 w-6 text-primary" />
+          <motion.a href="https://linkedin.com/in/amankr4578" target="_blank">
+          <Linkedin className="h-6 w-6 text-primary" />
+          </motion.a>
           </motion.div>
           <motion.div 
             className="rounded-full border bg-card/50 backdrop-blur-sm p-3"
             whileHover={{ scale: 1.05, backgroundColor: "hsl(var(--card))" }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
-            <Cloud className="h-6 w-6 text-primary" />
+          <motion.a href="/resume.pdf" target="_blank">
+          <FileText className="h-6 w-6 text-primary" />
+          </motion.a>
           </motion.div>
         </motion.div>
         <motion.p
