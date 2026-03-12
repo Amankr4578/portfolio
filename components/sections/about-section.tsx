@@ -70,7 +70,7 @@ export function AboutSection() {
             About Me
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">CS undergraduate, Web Developer, and code explorer.</p>
-          {true && (
+          {false && (
             <Dialog>
               <DialogTrigger asChild>
                 <Button 
@@ -229,6 +229,7 @@ export function AboutSection() {
           </motion.div>
         </div>
       </motion.div>
+      
     </SectionWrapper>
   )
 }

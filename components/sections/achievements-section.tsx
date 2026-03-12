@@ -8,40 +8,33 @@ import { motion } from "framer-motion"
 
 const achievements = [
   {
-    title: "1st Place - CodeStorm Hackathon 2024",
-    date: "March 2024",
-    icon: Trophy,
-    description: "Won first place among 50+ teams for building a real-time collaborative coding platform using Next.js and WebSockets.",
-    link: "https://devpost.com/software/your-hack"
-  },
-  {
-    title: "LeetCode Weekly Contest - Top 5%",
+    title: "LeetCode Contest Top 50%",
     date: "Ongoing",
     icon: Medal,
-    description: "Consistently ranking in top 5% globally in LeetCode weekly contests, solving complex algorithmic problems under time pressure.",
-    link: "https://leetcode.com/your-profile"
+    description: "Consistently solving complex algorithmic problems in LeetCode weekly contests and ranking in top 50%.",
+    link: "https://leetcode.com/amankr4578"
   },
   {
     title: "GitHub Star Contributor",
-    date: "2024",
+    date: "Ongoing",
     icon: Star,
-    description: "Recognized as a star contributor for open source projects with 500+ stars across repositories.",
+    description: "Recognized as a star contributor for open source projects with 5+ stars across repositories.",
     link: "https://github.com/amankr4578"
   },
   {
-    title: "Top 10 HackerRank",
-    date: "January 2024",
-    icon: Crown,
-    description: "Ranked #8 in university HackerRank contest, demonstrating strong problem-solving skills.",
-    link: "https://www.hackerrank.com/your-profile"
+    title: "Oracle Race to Certification",
+    date: "Nov 2025",
+    icon: Zap,
+    description: "Earned Oracle Race to Certification 2025 Level 1 and Level 2 Digital Badges",
+    link: "https://drive.google.com/file/d/1zDgCEnNnMZFEq_mbs1UtUi41TaMupwNU/view?usp=sharing"
   },
   {
-    title: "AWS Educate Merit Scholarship",
-    date: "June 2024",
-    icon: Zap,
-    description: "Selected for merit-based scholarship and cloud credits for outstanding cloud project.",
-    link: "https://aws.amazon.com/education"
-  },
+    title: "Hack Quest CTF - Concoction ",
+    date: "April 2024",
+    icon: Trophy,
+    description: "Won 25th place among 100+ teams for finding the bug a real-time collaborative coding platform",
+    link: "https://drive.google.com/file/d/18DjPUfhYy5FK1OvKAXVuzk3zENHLPmE_/view?usp=sharing"
+  }
 ]
 
 export function AchievementsSection() {

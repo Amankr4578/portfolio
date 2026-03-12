@@ -4,7 +4,9 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Github, Linkedin, Mail, Send, MapPin, Phone, Copy, Check, FileText } from "lucide-react"
+import { Mail, Send, MapPin, Phone, Copy, Check, FileText } from "lucide-react"
+import { Github, Linkedin} from "lucide-react"
+
 import { SectionWrapper } from "../section-wrapper"
 import { motion } from "framer-motion"
 import { useState } from "react"
@@ -21,23 +23,23 @@ const contactInfo = [
   {
     icon: <Github className="h-5 w-5" />,
     title: "Github",
-    value: "",
+    value: "github.com/amankr4578",
     link: "https://github.com/amankr4578",
-    copyable: true,
+   // copyable: true,
   },
   {
     icon: <Linkedin className="h-5 w-5" />,
     title: "LinkedIn",
-    value: "",
+    value: "linkedin.com/in/amankr4578",
     link: "https://www.linkedin.com/in/amankr4578",
-    copyable: true,
+    //copyable: true,
   },
   {
     icon: <FileText className="h-5 w-5" />,
-    title: "Resume",
-    value: "",
+    title: "Resume / CV",
+    value: "Click To See",
     link: "https://drive.google.com/file/d/1Afamhvwv_jix0kZwAGfmpGmypEEEGj9L/view?usp=sharing",
-    copyable: true,
+    //copyable: false,
   },
   {
     icon: <MapPin className="h-5 w-5" />,
@@ -61,7 +63,7 @@ export function ContactSection() {
       const formData = new FormData(form)
       
       // Use the form endpoint with proper encoding
-      const response = await fetch("https://formspree.io/f/xwpvdprd", {
+      const response = await fetch("https://formspree.io/f/xgonykob", {
         method: "POST",
         headers: {
           "Accept": "application/json"
@@ -91,10 +93,10 @@ export function ContactSection() {
     try {
       await navigator.clipboard.writeText(email)
       setCopiedEmail(true)
-      toast.success("Email copied to clipboard")
+      toast.success("Copied to clipboard")
       setTimeout(() => setCopiedEmail(false), 2000)
     } catch (err) {
-      toast.error("Failed to copy email")
+      toast.error("Failed to copy")
     }
   }
 

@@ -11,38 +11,53 @@ import { cn } from "@/lib/utils"
 
 const certifications = [
   {
-    title: "Oracle Certified Professional: Java SE Programmer",
+    title: "Oracle Certified Professional Java SE 17 Developer",
     issuer: "Oracle",
-    date: "Issued November 2024",
-    logo: "/logos/aws.svg", // Reuse existing, replace with actual
-    link: "https://www.credly.com/badges/your-oracle-badge",
+    date: "Issued November 2025",
+    logo: "/logos/aws.svg",
+    link: "https://drive.google.com/file/d/15DcRo8rC7-V6j3Wt__baJscBmUzsmHZw/view",
     description: "Professional certification validating core Java skills"
   },
   {
-    title: "Microsoft Certified: Azure Fundamentals (AZ-900)",
-    issuer: "Microsoft",
-    date: "Issued February 2024",
+    title: "MongoDB Associate Developer",
+    issuer: "MongoDB",
+    date: "Issued February 2026",
     logo: "/public/aws-logo.svg",
-    link: "https://www.credly.com/badges/your-azure-badge",
-    description: "Foundational Azure cloud knowledge certification"
+    link: "https://www.credly.com/badges/e0a634cf-0741-4077-83ca-778316f146e4/print",
+    description: "Foundational MongoDb Certification"
   },
   {
-    title: "AWS Certified Developer - Associate",
-    issuer: "Amazon Web Services",
-    date: "Issued August 2024",
+    title: "CS50 - Python ",
+    issuer: "Harvard University",
+    date: "Issued 2026",
     logo: "/public/aws-logo.svg",
-    link: "https://www.credly.com/badges/your-aws-badge",
-    description: "Develop and deploy applications on AWS"
+    link: "https://certificates.cs50.io/23d52fe1-af8e-42ff-abdf-dced63eb8c24.pdf?size=letter",
+    description: "Foundational Python Certification"
   },
   {
-    title: "Certified Kubernetes Administrator (CKA)",
-    issuer: "Cloud Native Computing Foundation",
-    date: "Issued May 2024",
+    title: "Oracle Certified Professional Oracle Linux 8 System Administrator",
+    issuer: "Oracle",
+    date: "Issued December 2025",
     logo: "/public/cncf-logo.svg",
-    link: "https://www.cncf.io/certification/cka/",
-    description: "Hands-on Kubernetes cluster administration"
+    link: "https://drive.google.com/file/d/1Uwq3ihxUi5ZyZRf9QyUmoLBqyFPLf4Q7/view",
+    description: "Professional Linux Certification"
   },
-  // Add more as needed
+  {
+    title: "Cloud Computing",
+    issuer: "NPTEL",
+    date: "Issued April 2025",
+    logo: "/public/cncf-logo.svg",
+    link: "https://archive.nptel.ac.in/noc/Ecertificate/?q=NPTEL25CS11S143730155104239448",
+    description: "Foundational Cloud Certification"
+  },
+  {
+    title: "DSA Training",
+    issuer: "Programming Pathshala",
+    date: "Issued August 2025",
+    logo: "/public/cncf-logo.svg",
+    link: "https://certificates.programmingpathshala.com/v2/doc?id=1b4ede7bb48456e0e3f6ffb7b93cdd1415c6480aa4142b50d7ac9113266b559a",
+    description: "Foundational DSA Certification"
+  }
 ]
 
 export function CertificationsSection() {

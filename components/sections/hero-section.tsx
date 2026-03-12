@@ -7,6 +7,7 @@ import { Code, Cpu, Cloud, ArrowRight } from "lucide-react"
 import { Github, Linkedin, FileText } from "lucide-react"
 import { useState } from "react"
 import { useEffect } from "react"
+import { FaChevronDown } from "react-icons/fa"
 
 type TypewriterProps = {
   texts: string[]
@@ -96,7 +97,7 @@ export function HeroSection() {
       onMouseEnter={() => setHover(true)} 
       onMouseLeave={() => setHover(false)}
     >
-      {/* Animated Background */}
+      {/* Animated Background
       <motion.div
         className="absolute inset-0 z-0"
         style={{
@@ -114,7 +115,7 @@ export function HeroSection() {
         <Cloud className="absolute top-[20%] right-[15%] h-48 w-48 text-primary/5 animate-float [animation-delay:-2s]" />
         <Cloud className="absolute bottom-[10%] left-[20%] h-24 w-24 text-primary/10 animate-float [animation-delay:-4s]" />
         <Cloud className="absolute bottom-[20%] right-[5%] h-36 w-36 text-primary/5 animate-float [animation-delay:-1s]" />
-      </motion.div>
+      </motion.div> */}
 
       {/* Content */}
       <div className="relative z-10 flex h-full flex-col items-center justify-center text-center px-4">
@@ -237,6 +238,13 @@ export function HeroSection() {
           </Button>
         </motion.div>
       </div>
+      <motion.div
+  animate={{ y: [0, 10, 0] }}
+  transition={{ duration: 2, repeat: Infinity }}
+  className="absolute bottom-10 left-1/2 -translate-x-1/2 text-muted-foreground/50"
+>
+  <FaChevronDown size={24} />
+</motion.div>
     </section>
   )
 }
