@@ -18,6 +18,7 @@ const navLinks = [
   { href: "#certifications", label: "Certifications", icon: <Star className="h-4 w-4" /> },
   //{ href: "#testimonials", label: "Testimonials", icon: <Star className="h-4 w-4" /> },
   { href: "#achievements", label: "Achievements", icon: <Star className="h-4 w-4" /> },
+  { href: "#resume", label: "Resume", icon: <FileText className="h-4 w-4" /> },
   { href: "#contact", label: "Contact", icon: <MessageSquare className="h-4 w-4" /> },
 ]
 
@@ -98,14 +99,14 @@ export function Header() {
             <a
               key={link.href}
               href={link.href}
-              onClick={(e) => handleLinkClick(e, link.href)}
+              //onClick={(e) => handleLinkClick(e, link.href)}
               className={cn(
                 "group relative px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-150 hover:bg-card/50",
                 activeSection === link.href.substring(1) 
                   ? "text-primary bg-primary/10 shadow-sm pointer-events-auto" 
                   : "text-muted-foreground hover:text-foreground pointer-events-auto"
               )}
-             // onClick={(e) => { e.preventDefault(); handleLinkClick(e, link.href); }}
+              onClick={(e) => { e.preventDefault(); handleLinkClick(e, link.href); }}
             >
               {link.label}
               {activeSection === link.href.substring(1) && (
@@ -137,7 +138,7 @@ export function Header() {
           </Button>
           <div className="relative flex items-center gap-2">
             <span className="text-[10px] font-pixel text-primary bg-background/95 backdrop-blur-sm px-1.5 py-0.5 rounded-full border border-primary/20 shadow-sm whitespace-nowrap">
-              try! <span className="inline-block ml-0.5">→</span>
+              try<span className="inline-block ml-0.5">→</span>
             </span>
             <ThemeToggle />
           </div>

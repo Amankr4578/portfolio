@@ -6,6 +6,7 @@ import { ProjectsSection } from "@/components/sections/projects-section"
 import { CertificationsSection } from "@/components/sections/certifications-section"
 import { AchievementsSection } from "@/components/sections/achievements-section"
 import { TestimonialsSection } from "@/components/sections/testimonials-section"
+import { ResumeSection } from "@/components/sections/resume-section"
 import { ContactSection } from "@/components/sections/contact-section"
 import { GlobalBackground } from "@/components/global-background"
 
@@ -20,6 +21,7 @@ export default function Home() {
       <ProjectsSection />
       <CertificationsSection />
       <AchievementsSection />
+      <ResumeSection />
       <TestimonialsSection />
       <ContactSection />
     </main>
