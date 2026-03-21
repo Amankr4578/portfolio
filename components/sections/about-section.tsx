@@ -1,11 +1,10 @@
 "use client"
 
 import { Card, CardHeader, CardTitle } from "@/components/ui/card"
-import { GraduationCap, School, Code, Cloud, Cpu, Award } from "lucide-react"
+import { GraduationCap, School, Award } from "lucide-react"
 import Image from "next/image"
 import { SectionWrapper } from "../section-wrapper"
 import { motion } from "framer-motion"
-import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import {
   Dialog,
@@ -29,12 +28,6 @@ const education = [
     duration: "2020 – 2022",
     icon: <School className="h-6 w-6" />,
   },
-]
-
-const interests = [
-  { name: "Web Development", icon: <Cloud className="h-4 w-4" /> },
-  { name: "Android Development", icon: <Code className="h-4 w-4" /> },
-  { name: "System Design", icon: <Cpu className="h-4 w-4" /> },
 ]
 
 const certificates = [
@@ -150,56 +143,39 @@ export function AboutSection() {
           )}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+        <div className="grid grid-cols-1 gap-8 items-start">
           <motion.div 
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="md:col-span-1 flex flex-col items-center"
+            className="space-y-6"
           >
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/10 rounded-full blur-xl" />
-              <Image
-                src="/images/me.jpeg"
-                alt="Aditya"
-                width={200}
-                height={200}
-                className="relative rounded-full object-cover border-4 border-primary/10 hover:border-primary/20 transition-colors duration-300"
-              />
-            </div>
-            <div className="mt-6 flex flex-wrap justify-center gap-2">
-              {interests.map((interest, index) => (
-                <motion.div
-                  key={interest.name}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.3 + index * 0.1 }}
-                >
-                  <Badge variant="secondary" className="flex items-center gap-1.5">
-                    {interest.icon}
-                    {interest.name}
-                  </Badge>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-
-          <motion.div 
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="md:col-span-2 space-y-6"
-          >
-            <div className="prose prose-sm dark:prose-invert max-w-none text-muted-foreground space-y-4">
-              <p className="text-lg leading-relaxed">
-                Hey! I'm Aman, a Computer Science student who's passionate about solving real-world problems through efficient and thoughtful code. I love working on clean UIs, scalable systems, and exploring how tech can make life easier.
-              </p>
-              <p className="text-lg leading-relaxed">
-                I'm constantly sharpening my skills across full-stack development, cloud infrastructure, and automation. I believe learning never stops, and I'm always up for a good challenge, a new stack, or an interesting bug to squash.
-              </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <Card className="border-primary/20 bg-gradient-to-br from-card to-muted/30 hover:shadow-xl transition-all duration-300">
+                <CardHeader>
+                  <CardTitle className="text-base">Brief Personal Intro</CardTitle>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    I am Aman, a Computer Science undergraduate who enjoys building practical, clean, and scalable digital products. I focus on writing thoughtful code that solves real user problems.
+                  </p>
+                </CardHeader>
+              </Card>
+              <Card className="border-primary/20 bg-gradient-to-br from-card to-muted/30 hover:shadow-xl transition-all duration-300">
+                <CardHeader>
+                  <CardTitle className="text-base">Academic Background & Career Goals</CardTitle>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    My academic foundation in computer science supports my growth in full-stack development, cloud, and system design. My goal is to become a product-focused software engineer who builds reliable systems at scale.
+                  </p>
+                </CardHeader>
+              </Card>
+              <Card className="border-primary/20 bg-gradient-to-br from-card to-muted/30 hover:shadow-xl transition-all duration-300">
+                <CardHeader>
+                  <CardTitle className="text-base">Unique Qualities & Interests</CardTitle>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    I am a fast learner who adapts quickly to new technologies, enjoys collaborative teamwork, and stays calm while debugging complex issues. I am especially interested in web architecture, automation, and impactful UI experiences.
+                  </p>
+                </CardHeader>
+              </Card>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">

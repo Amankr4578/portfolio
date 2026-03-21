@@ -5,6 +5,8 @@ import { useScroll, useTransform, useMotionValue, useSpring, useMotionValueEvent
 import { Button } from "@/components/ui/button"
 import { Code, Cpu, Cloud, ArrowRight } from "lucide-react"
 import { Github, Linkedin, FileText } from "lucide-react"
+import { Badge } from "@/components/ui/badge"
+import Image from "next/image"
 import { useState } from "react"
 import { useEffect } from "react"
 import { FaChevronDown } from "react-icons/fa"
@@ -118,125 +120,161 @@ export function HeroSection() {
       </motion.div> */}
 
       {/* Content */}
-      <div className="relative z-10 flex h-full flex-col items-center justify-center text-center px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="flex items-center gap-4"
-        >
-          <motion.div 
-            className="rounded-full border bg-card/50 backdrop-blur-sm p-3"
-            whileHover={{ scale: 1.05, backgroundColor: "hsl(var(--card))" }}
-            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+      <div className="relative z-10 h-full px-4 flex items-center justify-center">
+        <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="flex flex-col items-center"
           >
-          <motion.a href="https://github.com/amankr4578" target="_blank">
-          <Github className="h-6 w-6 text-primary" />
-          </motion.a>
-          </motion.div>
-          <motion.div 
-            className="rounded-full border bg-card/50 backdrop-blur-sm p-3"
-            whileHover={{ scale: 1.05, backgroundColor: "hsl(var(--card))" }}
-            transition={{ type: "spring", stiffness: 400, damping: 10 }}
-          >
-          <motion.a href="https://linkedin.com/in/amankr4578" target="_blank">
-          <Linkedin className="h-6 w-6 text-primary" />
-          </motion.a>
-          </motion.div>
-          <motion.div 
-            className="rounded-full border bg-card/50 backdrop-blur-sm p-3"
-            whileHover={{ scale: 1.05, backgroundColor: "hsl(var(--card))" }}
-            transition={{ type: "spring", stiffness: 400, damping: 10 }}
-          >
-          <motion.a href="/resume.pdf" target="_blank">
-          <FileText className="h-6 w-6 text-primary" />
-          </motion.a>
-          </motion.div>
-        </motion.div>
-        <motion.p
-  initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ delay: 0.3 }}
-  className="mt-6 text-primary font-mono text-lg"
->
-  Hi, My Name Is
-</motion.p>
-
-<motion.h1
-  initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8, delay: 0.4 }}
-  className="mt-4 text-4xl font-bold tracking-tight sm:text-6xl lg:text-7xl"
->
-  Aman Kumar
-</motion.h1>
-
-<motion.h2
-  initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ delay: 0.5 }}
-  className="mt-4 text-2xl sm:text-3xl font-semibold text-muted-foreground"
->
-  {" "}
-  <Typewriter
-    texts={[
-      "I build things for the web.",
-      "I create digital experiences.",
-      "I solve real-world problems.",
-      "I love building tech."
-    ]}
-  />
-</motion.h2>
-
-
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="mt-6 max-w-xl text-lg text-muted-foreground/90 leading-relaxed"
-        >
-          Innovative Full Stack Developer passionate about creating seamless and impactful web solutions. With a strong foundation in Computer Science and hands-on experience in modern web technologies, I thrive in collaborative environments and love tackling new challenges.
-
-        </motion.p>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="mt-8 flex flex-col sm:flex-row gap-4"
-        >
-          <Button 
-            size="lg" 
-            className="group relative overflow-hidden"
-            onClick={() => scrollToSection("projects")}
-          >
-            <span className="relative z-10 flex items-center gap-2">
-              View Projects
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1 relative z-10" />
-            </span>
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/10 rounded-full blur-xl" />
+              <Image
+                src="/images/me.jpeg"
+                alt="Aman Kumar"
+                width={240}
+                height={240}
+                className="relative rounded-full object-cover border-4 border-primary/10 hover:border-primary/20 transition-colors duration-300"
+              />
+            </div>
+            <div className="mt-6 flex flex-wrap justify-center gap-2">
+              <Badge variant="secondary" className="flex items-center gap-1.5">
+                <Cloud className="h-4 w-4" />
+                Web Development
+              </Badge>
+              <Badge variant="secondary" className="flex items-center gap-1.5">
+                <Code className="h-4 w-4" />
+                Cloud Computing
+              </Badge>
+              <Badge variant="secondary" className="flex items-center gap-1.5">
+                <Cpu className="h-4 w-4" />
+                Software Testing
+              </Badge>
+            </div>
             <motion.div
-              className="absolute inset-0 bg-primary/10"
-              initial={{ x: "-100%" }}
-              whileHover={{ x: 0 }}
-              transition={{ type: "spring", stiffness: 300, damping: 30 }}
-            />
-          </Button>
-          <Button 
-            variant="secondary" 
-            size="lg" 
-            className="group relative overflow-hidden"
-            onClick={() => scrollToSection("contact")}
-          >
-            <span className="relative z-10">
-              Contact Me
-            </span>
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.35 }}
+              className="mt-5 flex items-center justify-center gap-4"
+            >
+              <motion.div 
+                className="rounded-full border bg-card/50 backdrop-blur-sm p-3"
+                whileHover={{ scale: 1.05, backgroundColor: "hsl(var(--card))" }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              >
+              <motion.a href="https://github.com/amankr4578" target="_blank">
+              <Github className="h-6 w-6 text-primary" />
+              </motion.a>
+              </motion.div>
+              <motion.div 
+                className="rounded-full border bg-card/50 backdrop-blur-sm p-3"
+                whileHover={{ scale: 1.05, backgroundColor: "hsl(var(--card))" }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              >
+              <motion.a href="https://linkedin.com/in/amankr4578" target="_blank">
+              <Linkedin className="h-6 w-6 text-primary" />
+              </motion.a>
+              </motion.div>
+              <motion.div 
+                className="rounded-full border bg-card/50 backdrop-blur-sm p-3"
+                whileHover={{ scale: 1.05, backgroundColor: "hsl(var(--card))" }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              >
+              <motion.a href="/resume.pdf" target="_blank">
+              <FileText className="h-6 w-6 text-primary" />
+              </motion.a>
+              </motion.div>
+            </motion.div>
+          </motion.div>
+
+          <div className="flex flex-col items-center text-center">
+            <motion.p
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.3 }}
+      className="text-primary font-mono text-lg"
+    >
+      Hi, My Name Is
+    </motion.p>
+
+    <motion.h1
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, delay: 0.4 }}
+      className="mt-4 text-4xl font-bold tracking-tight sm:text-6xl lg:text-7xl"
+    >
+      Aman Kumar
+    </motion.h1>
+
+    <motion.h2
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.5 }}
+      className="mt-4 text-2xl sm:text-3xl font-semibold text-muted-foreground"
+    >
+      {" "}
+      <Typewriter
+        texts={[
+          "I build things for the web.",
+          "I create digital experiences.",
+          "I solve real-world problems.",
+          "I love building tech."
+        ]}
+      />
+    </motion.h2>
+
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="mt-6 max-w-xl text-lg text-muted-foreground/90 leading-relaxed"
+            >
+              Innovative Full Stack Developer passionate about creating seamless and impactful web solutions. With a strong foundation in Computer Science and hands-on experience in modern web technologies, I thrive in collaborative environments and love tackling new challenges.
+
+            </motion.p>
             <motion.div
-              className="absolute inset-0 bg-secondary/20"
-              initial={{ x: "-100%" }}
-              whileHover={{ x: 0 }}
-              transition={{ type: "spring", stiffness: 300, damping: 30 }}
-            />
-          </Button>
-        </motion.div>
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+              className="mt-8 flex flex-col sm:flex-row gap-4"
+            >
+              <Button 
+                size="lg" 
+                className="group relative overflow-hidden"
+                onClick={() => scrollToSection("projects")}
+              >
+                <span className="relative z-10 flex items-center gap-2">
+                  View Projects
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1 relative z-10" />
+                </span>
+                <motion.div
+                  className="absolute inset-0 bg-primary/10"
+                  initial={{ x: "-100%" }}
+                  whileHover={{ x: 0 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                />
+              </Button>
+              <Button 
+                variant="secondary" 
+                size="lg" 
+                className="group relative overflow-hidden"
+                onClick={() => scrollToSection("contact")}
+              >
+                <span className="relative z-10">
+                  Contact Me
+                </span>
+                <motion.div
+                  className="absolute inset-0 bg-secondary/20"
+                  initial={{ x: "-100%" }}
+                  whileHover={{ x: 0 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                />
+              </Button>
+            </motion.div>
+          </div>
+        </div>
       </div>
       <motion.div
   animate={{ y: [0, 10, 0] }}

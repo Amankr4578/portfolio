@@ -1,16 +1,28 @@
 "use client"
 
 import type React from "react"
-import { Cloud } from "lucide-react"
+import { useEffect, useState } from "react"
 
-const navLinks = [
-  { href: "#about", label: "About" },
-  { href: "#experience", label: "Experience" },
-  { href: "#projects", label: "Projects" },
-  { href: "#contact", label: "Contact" },
-]
+const getIstTime = () =>
+  new Intl.DateTimeFormat("en-IN", {
+    timeZone: "Asia/Kolkata",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: true,
+  }).format(new Date())
 
 export function Footer() {
+  const [istTime, setIstTime] = useState(getIstTime())
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setIstTime(getIstTime())
+    }, 1000)
+
+    return () => clearInterval(timer)
+  }, [])
+
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     if (href.startsWith("#")) {
       e.preventDefault()
@@ -23,17 +35,24 @@ export function Footer() {
 
   return (
     <footer className="py-8 md:px-8 border-t bg-background">
-      <div className="container flex flex-col items-center justify-between gap-6 md:flex-row">
-        <div className="flex items-center space-x-2">
-          {/* <Cloud className="h-5 w-5 text-primary" /> */}
-          <a 
-          href="#hero" 
-          onClick={(e) => handleLinkClick(e, "#hero")} >
-          <span className="font-semibold">&lt;Aman /&gt;</span></a>
+      <div className="container grid grid-cols-1 gap-6 md:grid-cols-3 md:items-center">
+        <div className="flex flex-col items-center text-center md:items-start md:text-left">
+          <a href="#hero" onClick={(e) => handleLinkClick(e, "#hero")}>
+            <span className="font-semibold">&lt;Aman /&gt;</span>
+          </a>
+          {/* <p className="mt-2 text-sm text-muted-foreground">Phagwara, Punjab, India</p>
+          <p className="text-sm text-muted-foreground">Local time: {istTime} IST</p> */}
         </div>
-        <p className="text-center text-sm text-muted-foreground md:text-left">
-          © {new Date().getFullYear()} Copyright. All Rights Reserved
+
+        <p className="text-center text-sm text-muted-foreground">Phagwara, Punjab {istTime} IST
         </p>
+
+        <div className="flex flex-col items-center text-center md:items-end md:text-right">
+          <p className="text-sm text-muted-foreground">Designed & Developed by Aman Kumar</p>
+          {/* <p className="text-sm text-muted-foreground">
+            Built with Next.js, TypeScript, and Framer Motion
+          </p> */}
+        </div>
       </div>
     </footer>
   )
