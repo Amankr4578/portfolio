@@ -13,11 +13,11 @@ import { cn } from "@/lib/utils"
 
 export const projectsData = [
    {title: "EcoBazaarX",
-    shortDescription: "A production-ready two-tier web application demonstrating modern DevOps practices across AWS and GCP. Built with Python FastAPI, Next.js, and fully automated CI/CD pipelines." , 
-    longDescription: "This project showcases a complete cloud-native application deployed to both AWS and GCP, with infrastructure as code, automated testing, and comprehensive monitoring. The application features a FastAPI backend and Next.js frontend, demonstrating my ability to work with modern cloud platforms and DevOps tooling." ,
-    challenges: "Debugging failed deployments, tweaking configs, and seeing real failures." , 
-    learnings: "The best part was pushing code and watching it automatically build, test, push, and deploy to production with zero manual steps. Seeing the pipeline run successfully after fixing broken deployments made everything click. Building this was way made me learn than reading 10 articles about DevOps. Debugging failed deployments, tweaking configs, and seeing real failures, fixes, and success teaches you what documentation cannot." ,
-    stack: [ "Java" , "SpringBoot" , "Terraform" , "GitHub Actions" , "Docker", "NextJS", "Python" , "FastAPI" , "Uvicorn" , "Pytest" , "Jist" ] , 
+  shortDescription: "A sustainable marketplace web app with eco-scoring, carbon footprint insights, rewards, analytics, and secure role-based authentication." , 
+  longDescription: "EcoBazaarX is a full-featured e-commerce platform focused on sustainable shopping. It combines product browsing, cart, orders, rewards, and environmental impact analytics with eco-scoring and carbon tracking. The project includes separate user and admin capabilities, API documentation via Swagger, and AI-assisted features for a smarter marketplace experience." ,
+  challenges: "Major challenges included designing a large multi-module app (user, admin, analytics, rewards), securing role-based routes with JWT, managing consistent TypeScript data flow across frontend and backend, and keeping performance smooth while rendering analytics-heavy views." , 
+  learnings: "This project strengthened my full-stack architecture skills using React + TypeScript + Express, taught me practical JWT + bcrypt authentication and RBAC implementation, improved API design/documentation with Swagger, and gave me hands-on experience integrating AI and analytics into a production-style marketplace." ,
+  stack: [ "React" , "TypeScript" , "Express" , "Node.js" , "SQLite" , "JWT" , "bcryptjs" , "Framer Motion" , "Recharts" , "Google Gemini API" , "RenderForest" ] , 
     image: "/images/MultiCloud.png", 
     screenshots: [
        "/images/MultiCloud.png",
@@ -26,37 +26,38 @@ export const projectsData = [
        "/images/MultiCloud4.png",
        "/images/MultiCloud5.png",
        ],
-    githubUrl: "https://github.com/Amankr4578/Ecobazaarx.git", 
-    slug: "MultiCloud"     
+    githubUrl: "https://github.com/Amankr4578/Ecobazaarx.git",
+    liveUrl: "https://taskprism.streamlit.app/", 
+    slug: "ecobazaarx"     
     },
    {
   title: "SkillBridge",
-  shortDescription: "A web platform that uses AI to analyze vision health, featuring deep learning models for retinal disease detection and color blindness testing. Built with Flask, Next.js, and TensorFlow/Keras.",
-  longDescription: "OculusAI is an advanced AI-powered platform for eye disease detection and color blindness analysis. Users can upload retinal images for instant diagnosis or take an interactive Ishihara color vision test. The system leverages deep learning models for real-time inference, provides professional PDF reports, and supports both desktop and mobile devices. Multiple user interfaces are available, including a Next.js web app, Streamlit dashboard, and REST API. Designed for clinicians, researchers, and individuals, OculusAI streamlines image analysis, reporting, and patient evaluation with a scalable, modular architecture.",
-  challenges: "Key challenges included building robust image validation to filter out non-retinal images, optimizing AI models for real-time CPU inference, and designing a mobile-friendly, responsive UI. Integrating multiple disease types and color blindness categories, and ensuring clear, user-friendly error handling, also required careful engineering.",
-  learnings: "Developing OculusAI improved my skills in deep learning model deployment, full-stack development, and responsive UI design. I gained experience in medical image analysis, building multi-interface systems, and creating secure, scalable web applications for healthcare use cases.",
-  stack: ["NextJS", "ReactJs", "ExpressJs", "Tailwind", "MongoDB", "JWT/BCCrypt"],
+  shortDescription: "A full-stack platform that connects volunteers with NGOs through opportunity matching, role-based dashboards, applications, messaging, and notifications.",
+  longDescription: "SkillBridge is a volunteer and NGO collaboration platform built during the Infosys Springboard Full Stack milestone. Volunteers can create profiles, add skills, browse and apply to opportunities, and communicate with NGOs. NGOs can create opportunities, manage applications, and connect with volunteers. The platform includes secure JWT authentication, role-based workflows, real-time messaging with Socket.IO, and match suggestions based on skills.",
+  challenges: "Key challenges included implementing clean role-based access control across volunteer and NGO workflows, designing stable real-time communication with Socket.IO, and coordinating multiple backend modules (auth, opportunities, applications, messaging, notifications) while keeping frontend state and API integration consistent.",
+  learnings: "This project strengthened my MERN-stack fundamentals, especially Express API structuring and MongoDB data modeling, secure JWT + bcrypt authentication, and building real-time features with Socket.IO. I also improved at creating scalable dashboard flows and modular service-based frontend architecture.",
+  stack: ["React", "Vite", "JavaScript", "Node.js", "Express", "MongoDB", "Mongoose", "JWT", "bcryptjs", "Socket.IO", "React Router", "Axios"],
   image: "/images/skill.png",
   screenshots: [
-    "/images/oculusai_ss1.png",
+    "/images/skill.png",
     "/images/oculusai_ss2.png",
     "/images/oculusai_ss3.png",
     "/images/oculusai_ss4.png",
     "/images/oculusai_ss5.png",
    
   ],
-  githubUrl: "https://github.com/adityacodes-root/OculusAI",
-  liveUrl: "https://main.d9byo4q7538fc.amplifyapp.com",
-  slug: "OculusAI"
+  githubUrl: "https://github.com/Amankr4578/infosysSkillBridgeNGO.git",
+  liveUrl: "https://taskprism.streamlit.app/",
+  slug: "skillbridge"
 },
   {
     
     title:"EcoSync",
-    shortDescription:"A full-stack application that enables users to interact with PostgreSQL databases using natural language. Built with FastAPI and OpenAI's GPT-4o, it translates user prompts into SQL and returns results securely.",
-    longDescription:"EchoDB is an AI-powered tool that simplifies database interaction by allowing users to input natural language queries, which are translated into SQL using OpenAI's GPT-4o model. It includes an approval layer for SQL execution, CRUD support, and a minimal frontend. The system is designed for developers and analysts to query PostgreSQL or MySQL databases without writing SQL manually. Built with scalability, security, and modularity in mind, EchoDB bridges the gap between natural language and database management.",
-    challenges:"Integrating AI-generated SQL securely posed the biggest challenge, especially handling edge cases and preventing malicious queries. Another challenge was ensuring compatibility between multiple SQL dialects and dynamically interpreting natural language prompts into precise SQL statements.",
-    learnings:"This project improved my skills in API development with FastAPI, prompt engineering for GPT models, database querying logic, and creating secure execution environments. I also gained deeper insights into backend design, AI integration, and full-stack architecture.",
-    stack:["NextJS","PostgreSQL","OpenAI GPT-4o","Framer Motion","Tailwind","Recharts"],
+    shortDescription:"A modern waste management platform with pickup scheduling, interactive maps, admin analytics, and real-time notifications.",
+    longDescription:"EcoSync is a full-stack waste management web app with separate user and admin experiences. Users can schedule waste pickups, select locations on an interactive map, track updates, and manage notifications. Admins can monitor users and pickups, manage platform settings, and view dashboard statistics. The project is built with a React + Vite frontend and an Express + MongoDB backend secured with JWT authentication.",
+    challenges:"The main challenges were coordinating role-based flows for users and admins, implementing reliable pickup scheduling with map interactions, and keeping notification/status updates consistent between frontend and backend modules.",
+    learnings:"This project improved my skills in building end-to-end MERN-style systems, implementing JWT-based authentication and protected routes, structuring scalable React components, and designing admin-oriented dashboards with clean data flow.",
+    stack:["React","MongoDB","Node.js","Express","Mongoose","JWT","Tailwind CSS","Framer Motion","Leaflet"],
     image: "/images/echodb.png",
     screenshots: [
       "/images/echodbss1.png",
@@ -64,15 +65,16 @@ export const projectsData = [
       "/images/echodbss3.png"
     ],
     githubUrl: "https://github.com/Amankr4578/ecoSync.git",
-    slug: "Ecosync"
+    liveUrl: "https://taskprism.streamlit.app/",
+    slug: "ecosync"
   },
   {
     title:"Crop Recommendation System",
-    shortDescription:"A visual task/resource allocation tool that uses graph coloring algorithms to optimize scheduling. Built with Streamlit and NetworkX, it enables interactive dependency mapping, priority setting, and Gantt chart visualization.",
-    longDescription:"TaskPrism is a project management utility that leverages graph coloring to allocate tasks to resources efficiently. Users can define task dependencies, durations, deadlines, and priorities through an intuitive Streamlit UI. The system visualizes dependencies using graphs, generates execution timelines with Gantt charts, and ensures minimal resource conflicts. It helps project managers streamline task scheduling and optimize workload distribution with real-time visual feedback. Built using Python, NetworkX, and Plotly, TaskPrism bridges the gap between theoretical graph algorithms and practical project planning.",
-    challenges:"Designing a dynamic system to handle arbitrary task dependencies while minimizing resource conflicts was a significant challenge. Integrating visual elements like interactive graphs and Gantt charts while maintaining performance and user control over graph density and parameters was also non-trivial.",
-    learnings:"This project strengthened my understanding of graph theory, especially coloring and dependency resolution algorithms. I gained experience in interactive data visualization using Streamlit and Plotly, along with designing user-driven, responsive scheduling tools.",
-    stack:["Python","Streamlit","NetworkX","Plotly","Pandas","Matplotlib","NumPy"],
+    shortDescription:"An AI-powered agriculture system that recommends the best crop using soil and climate inputs, with additional plant disease detection and profit estimation modules.",
+    longDescription:"This project predicts suitable crops using inputs like Nitrogen, Phosphorus, Potassium, temperature, humidity, pH, and rainfall. It combines data preprocessing, exploratory analysis, hypothesis testing, and model training across multiple machine learning algorithms. A Random Forest model was selected for deployment due to high accuracy and robustness, and the solution also includes deep learning-based leaf disease detection and a farmer-friendly profit calculator interface.",
+    challenges:"Key challenges included cleaning noisy agricultural data (nulls, duplicates, outliers), comparing many ML algorithms fairly, tuning models for consistent accuracy, and integrating prediction, disease analysis, and profit calculation into a single usable workflow.",
+    learnings:"This project improved my end-to-end ML pipeline skills: data preprocessing, EDA, statistical testing, model benchmarking, and deployment-focused model selection. I also gained practical experience in combining ML and DL modules into one applied agriculture use case.",
+    stack:["Python","Scikit-learn","TensorFlow","Pandas","NumPy","Matplotlib","Seaborn","Gradio"],
     image: "/images/taskprism.png",
     screenshots: [
       "/images/taskprismss1.png",
@@ -81,29 +83,30 @@ export const projectsData = [
     ],
     githubUrl: "https://github.com/Amankr4578/crop-recommendation-system.git",
     liveUrl: "https://taskprism.streamlit.app/",
-    slug: "TaskPrism-Resource-Allocation-via-Graph-Coloring"
+    slug: "crop-recommendation-system"
   },
   {
     title:"Secure File Management",
-    shortDescription:"An Arduino-based gas monitoring and alert system that detects LPG, CO, and smoke levels in the environment. It uses an MQ2 sensor, I2C LCD, and RTC module to log gas leaks with real-time alerts.",
-    longDescription:"This embedded system project monitors the environment for gas leaks using an MQ2 sensor and Arduino Nano. When gas levels exceed a threshold, it triggers an alert via buzzer and optionally activates an exhaust fan. The I2C LCD displays real-time gas and temperature readings, and an RTC module provides timestamped logging of leak events. Designed for safety in homes, industries, and labs, the project combines sensor integration, real-time monitoring, and event-based alerts into a portable, affordable solution.",
-    challenges:"Calibrating the MQ2 sensor to accurately detect various gases and reduce false positives was a challenge. Integrating multiple components like the RTC module and LCD without timing conflicts or I2C communication errors also required careful handling.",
-    learnings:"This project enhanced my skills in embedded systems design, sensor interfacing, I2C communication, and real-time data display. I also learned how to work with time-based event logging and built a deeper understanding of hardware-software integration.",
-    stack:["Arduino Nano","MQ2 Sensor","I2C LCD","RTC DS3231","C++ (Arduino)","Breadboard","Buzzer"],
+    shortDescription:"A secure file manager that supports user authentication, file upload/download, encryption/decryption, and protected API operations.",
+    longDescription:"Secure File Management System is a Python-based application with both desktop GUI and web API flows. Users can register/login, upload and manage files, and perform encryption/decryption using password-derived keys with Fernet. The backend includes file operations, session handling, and security-focused endpoints, while data is stored in SQLite. The project is deployment-ready for Vercel with a local development workflow.",
+    challenges:"Key challenges included implementing consistent security across authentication and file actions, handling encrypted binary file workflows safely, and supporting both local database mode and Vercel deployment constraints (in-memory SQLite behavior).",
+    learnings:"This project improved my practical skills in backend security design, bcrypt-based password protection, cryptographic file handling with Fernet, and API route design for file lifecycle operations like upload, download, encryption, and deletion.",
+    stack:["Python","Tkinter","SQLite","bcrypt","cryptography (Fernet)","Flask","Flask-CORS","Vercel"],
     image: "/images/gasdetector.jpg",
     screenshots: [
       "/images/gasdetectorss1.jpg"
     ],
     githubUrl: "https://github.com/Amankr4578/Secure-File-Management-System.git",
-    slug: "Gas-Detection-and-Alert-System"
+    liveUrl: "https://taskprism.streamlit.app/",
+    slug: "secure-file-management-system"
   },
   {
     title:"Code Debugger",
-    shortDescription:"A browser-based tool that allows users to draw, customize, and download digital signatures using HTML5 Canvas. Features include pen color selection, background customization, undo, eraser, and image export.",
-    longDescription:"Digital Signature Maker is a lightweight web app that lets users create custom digital signatures with ease. Built using HTML5 Canvas, Tailwind CSS, and JavaScript, it provides tools for adjusting pen color, line width, and canvas background. Users can erase, undo actions, clear the canvas, and download their signature as a PNG image. The app is designed for professionals needing quick, customizable, and reusable signature creation in a browser environment without any installations.",
-    challenges:"Managing canvas state for undo functionality and syncing UI controls like color pickers and sliders with drawing behavior was initially challenging. Ensuring clean downloads of transparent signatures and proper eraser logic also required fine-tuning.",
-    learnings:"This project deepened my understanding of the HTML5 Canvas API, state management in client-side applications, and responsive design using Tailwind CSS. I also learned techniques for implementing drawing tools and file export features in vanilla JavaScript.",
-    stack:["HTML5 Canvas","Tailwind CSS","JavaScript"],    
+    shortDescription:"An AI-powered debugging assistant that analyzes code across multiple languages with dedicated modes for debugging, performance, security, and explanation.",
+    longDescription:"Code Guardian is an AI debugging tool built with Python that supports both desktop and web interfaces. Users can paste or load source files, select the programming language, and run one of four analysis modes: Standard Debugging, Performance Analysis, Security Review, or Code Explanation. The app integrates Google Gemini to generate structured feedback, code fixes, and explanations, and allows saving debugging sessions for future reference.",
+    challenges:"The main challenges were designing prompts that produce reliable, structured outputs across different languages and debug modes, formatting AI responses clearly for end users, and keeping the UI responsive while processing longer code analyses.",
+    learnings:"This project improved my skills in prompt engineering, AI-assisted developer tooling, and building practical debugging workflows with mode-specific analysis. I also gained experience in creating user-friendly interaction layers for both Tkinter desktop and Flask web delivery.",
+    stack:["Python","Tkinter","Flask","Google Gemini API","Bootstrap","HTML/CSS","JavaScript"],    
     image: "/images/sm.png",
     screenshots: [
       "/images/sm.png",
@@ -111,8 +114,42 @@ export const projectsData = [
       
     ],
     githubUrl: "https://github.com/Amankr4578/code-debugger.git",
-    liveUrl: "https://adityacodes-root.github.io/digital-signature-maker/",
-    slug: "Digital-Signature-Maker"
+    liveUrl: "https://code-debugger-shashwat-kashyaps-projects.vercel.app/",
+    slug: "code-debugger"
+  },
+  {
+    title:"Synthesia - Web Music Player",
+    shortDescription:"A full-stack music streaming app with JWT auth, Jamendo-powered discovery, favorites management, and interactive playback controls.",
+    longDescription:"WSA Synthesia is a MERN-based music platform where users can sign up, log in, browse tracks, search songs, load playlist tags, and manage favorites. It features a modern audio player with play/pause, seek, next/previous, loop, shuffle, speed, and volume controls. The app includes secure profile flows like edit profile, forgot password, and reset password, with backend APIs handling authentication, user data, and song interactions.",
+    challenges:"The main challenges were coordinating frontend player state across many controls, handling secure JWT-based auth flows with profile and password reset features, and maintaining clean integration between Jamendo song data and MongoDB-backed user favorites.",
+    learnings:"This project strengthened my MERN architecture skills, especially Redux state management for media controls, robust Express route structuring for auth and songs, and practical secure user-flow design using JWT, bcrypt, and email-based reset logic.",
+    stack:["React","Redux Toolkit","Tailwind CSS","Node.js","Express","MongoDB","Mongoose","JWT","bcrypt","Nodemailer","Jamendo API"],
+    image: "/images/oculusai_ss1.png",
+    screenshots: [
+      "/images/oculusai_ss1.png",
+      "/images/oculusai_ss2.png",
+      "/images/oculusai_ss3.png"
+    ],
+    githubUrl: "https://github.com/Amankr4578/wsa-synthesia-app.git",
+    liveUrl: "https://wsa-synthesia-app.netlify.app/",
+    slug: "wsa-synthesia-app"
+  },
+  {
+    title:"Government-University Portal",
+    shortDescription:"A role-based education governance platform connecting government officials and universities with dashboards, analytics, and centralized academic data management.",
+    longDescription:"EduGov Connect is a full-stack web portal that streamlines education governance through separate workflows for government and university users. Government officials can monitor registered universities, review aggregate analytics, and download reports, while university admins can manage departments, courses, and student records through dedicated dashboards. The platform includes secure authentication flows, diagnostics utilities, and reporting APIs built on a PHP + MySQL backend.",
+    challenges:"The core challenges were designing clear role-based experiences across two portals, maintaining reliable data consistency between universities, departments, courses, and students, and building reporting/analytics views that remain fast and readable as records scale.",
+    learnings:"This project improved my backend and system-design skills in PHP, especially session-based authentication, modular API structuring, SQL schema planning, and dashboard-focused data aggregation. I also strengthened frontend implementation using Tailwind-driven responsive UI for admin workflows.",
+    stack:["PHP","MySQL","JavaScript","CSS","Tailwind CSS","HTML","Chart.js","XAMPP/Apache"],
+    image: "/images/me.jpeg",
+    screenshots: [
+      "/images/me.jpeg",
+      "/images/MultiCloud1.png",
+      "/images/taskprismss1.png"
+    ],
+    githubUrl: "https://github.com/Amankr4578/Government-University-Portal.git",
+    liveUrl: "",
+    slug: "government-university-portal"
   }
 ]
 

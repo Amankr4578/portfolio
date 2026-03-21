@@ -23,16 +23,16 @@ const contactInfo = [
   {
     icon: <Github className="h-5 w-5" />,
     title: "Github",
-    value: "github.com/amankr4578",
-    link: "https://github.com/amankr4578",
-   // copyable: true,
+    value: "github.com/Amankr4578",
+    link: "https://github.com/Amankr4578",
+    copyable: true,
   },
   {
     icon: <Linkedin className="h-5 w-5" />,
     title: "LinkedIn",
     value: "linkedin.com/in/amankr4578",
     link: "https://www.linkedin.com/in/amankr4578",
-    //copyable: true,
+    copyable: true,
   },
   {
     icon: <FileText className="h-5 w-5" />,
@@ -42,11 +42,11 @@ const contactInfo = [
     //copyable: false,
   },
   {
-    icon: <MapPin className="h-5 w-5" />,
-    title: "Location",
-    value: "Punjab, India",
-    link: "#",
-    copyable: false,
+    icon: <Phone className="h-5 w-5" />,
+    title: "Phone",
+    value: "+91-9123176564",
+    //link: "https://maps.app.goo.gl/Kfk9FAr2maFthvQ17",
+    copyable: true,
   }
 ]
 
@@ -131,7 +131,7 @@ export function ContactSection() {
           transition={{ delay: 0.3 }}
           className="lg:col-span-2 order-1 lg:order-2"
         >
-          <Card className="border-none bg-card/50 backdrop-blur-sm">
+          <Card className="group h-full hover:shadow-xl transition-all duration-400 border-primary/20 bg-gradient-to-br from-card to-muted/30 backdrop-blur-sm overflow-hidden">
             <CardHeader>
               <CardTitle>Send a Message</CardTitle>
               <CardDescription>I'll get back to you as soon as possible.</CardDescription>
@@ -182,7 +182,7 @@ export function ContactSection() {
                     id="message" 
                     name="message"
                     placeholder="Your Message" 
-                    rows={7} 
+                    rows={8} 
                     className="bg-background/50 backdrop-blur-sm resize-none"
                     required 
                   />
@@ -220,17 +220,19 @@ export function ContactSection() {
             <motion.a
               key={info.title}
               href={info.link}
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 + index * 0.1 }}
-              className="flex items-center gap-4 p-4 rounded-lg border bg-card/50 backdrop-blur-sm hover:bg-card/80 transition-colors group relative"
+              className="group relative flex items-center gap-4 p-4 rounded-lg border border-primary/20 bg-gradient-to-br from-card to-muted/30 backdrop-blur-sm hover:shadow-xl transition-all duration-400 overflow-hidden"
             >
-              <div className="p-2 rounded-full bg-primary/10 text-primary">
+              <div className="p-2 rounded-full bg-primary/10 text-primary group-hover:bg-primary/20 group-hover:scale-105 transition-all duration-300">
                 {info.icon}
               </div>
               <div className="flex-1">
-                <h3 className="font-medium">{info.title}</h3>
+                <h3 className="font-medium group-hover:text-primary transition-colors">{info.title}</h3>
                 <p className="text-sm text-muted-foreground">{info.value}</p>
               </div>
               {info.copyable && (

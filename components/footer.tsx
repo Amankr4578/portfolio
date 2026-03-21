@@ -26,7 +26,10 @@ export function Footer() {
       <div className="container flex flex-col items-center justify-between gap-6 md:flex-row">
         <div className="flex items-center space-x-2">
           {/* <Cloud className="h-5 w-5 text-primary" /> */}
-          <span className="font-semibold">&lt;Aman /&gt;</span>
+          <a 
+          href="#hero" 
+          onClick={(e) => handleLinkClick(e, "#hero")} >
+          <span className="font-semibold">&lt;Aman /&gt;</span></a>
         </div>
         <p className="text-center text-sm text-muted-foreground md:text-left">
           © {new Date().getFullYear()} Copyright. All Rights Reserved

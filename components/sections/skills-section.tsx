@@ -48,14 +48,15 @@ const skillsData: SkillCategory[] = [
       { name: "MySQL", icon: <Database size={20} /> },
       { name: "MongoDB", icon: <Database size={20} /> },
       { name: "PostgreSQL", icon: <Database size={20} /> },
+      { name: "SupaBase", icon: <Database size={20} /> },
     ],
   },
   {
     title: "Web Development",
     icon: <TerminalIcon className="h-7 w-7" />,
     skills: [
-      { name: "React", icon: <Zap size={20} /> },
-      { name: "Next.js", icon: <Code size={20} /> },
+      { name: "React.js", icon: <Zap size={20} /> },
+      //{ name: "Next.js", icon: <Code size={20} /> },
       { name: "HTML", icon: <Code size={20} /> },
       { name: "Tailwind CSS", icon: <Palette size={20} /> },
       { name: "Node.js", icon: <Code size={20} /> },
@@ -67,8 +68,8 @@ const skillsData: SkillCategory[] = [
     icon: <GitMerge className="h-7 w-7" />,
     skills: [
       { name: "Linux", icon: <TerminalIcon size={20} /> },
-      { name: "Git", icon: <GitMerge size={20} /> },
-      { name: "GitHub", icon: <GitMerge size={20} /> },
+      { name: "Git/GitHub", icon: <GitMerge size={20} /> },
+      { name: "Vercel", icon: <Cloud size={20} /> },
       { name: "VS Code", icon: <TerminalIcon size={20} /> },
     ],
   },
@@ -88,6 +89,8 @@ const skillsData: SkillCategory[] = [
     skills: [
       { name: "Data Structures & Algorithms", icon: <Code size={20} /> },
       { name: "Software Testing", icon: <Search size={20} /> },
+      { name: "DevOps", icon: <Cloud size={20} /> },
+      { name: "Cloud Computing", icon: <Zap size={20} /> },
     ],
   }
 ]

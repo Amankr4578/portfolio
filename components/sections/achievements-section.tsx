@@ -8,18 +8,18 @@ import { motion } from "framer-motion"
 
 const achievements = [
   {
-    title: "LeetCode Contest Top 50%",
-    date: "Ongoing",
+    title: "LeetCode Rank Top 50%",
+    date: "Feb 2026",
     icon: Medal,
-    description: "Regular participation in LeetCode weekly contests ranking consistently in top 50% globally",
-    link: "https://leetcode.com/amankr4578"
+    description: "Regular participation in LeetCode practice problem ranking 1,537,807 globally",
+    link: "https://leetcode.com/Aman-kumar-1305/"
   },
   {
-    title: "GitHub Star Contributor",
-    date: "Ongoing",
+    title: "GitHub Contributor & Badges",
+    date: "Jan 2026",
     icon: Star,
-    description: "Active open source contributor recognized on GitHub with stars across multiple repositories",
-    link: "https://github.com/amankr4578"
+    description: "Active open source contributor recognized on GitHub with badges across multiple repositories",
+    link: "https://github.com/Amankr4578"
   },
   {
     title: "Oracle Race to Certification",

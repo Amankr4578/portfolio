@@ -3,7 +3,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Briefcase, Calendar, MapPin, ArrowRight, Zap, Target, TrendingUp } from "lucide-react"
+import { Briefcase, Calendar, MapPin, ArrowRight, Zap, Target, TrendingUp, ExternalLink } from "lucide-react"
 import { SectionWrapper } from "../section-wrapper"
 import Image from "next/image"
 import { motion, AnimatePresence } from "framer-motion"
@@ -11,20 +11,68 @@ import { useState, useRef, useEffect } from "react"
 
 const experiences = [
   {
+    id: "infosys-springboard",
+    role: "Developer Intern",
+    company: "Infosys Springboard",
+    duration: "February 2026 – Present",
+    location: "Bengaluru, India",
+    type: "Internship",
+    description: [
+      "Completed internship training as a Developer Intern under Infosys Springboard with hands-on project-based learning.",
+      "Worked on practical development tasks, strengthening coding standards, debugging, and solution-building skills.",
+      "Collaborated in a structured program environment to deliver milestones on time and improve professional readiness."
+    ],
+    logo: "/logos/infosys.png",
+    logoAlt: "Infosys SpringBoard Logo",
+    logoScale: "scale-100",
+    certificateLink: "https://drive.google.com/file/d/1xbX8xHOtSenRqqieGwwg5YDLPcD0w-PT/view?usp=sharing",
+
+    metrics: [
+      { label: "Development Tasks Completed", value: "12+", icon: <TrendingUp className="h-3 w-3" /> },
+      { label: "Code Quality Improved", value: "20%", icon: <Zap className="h-3 w-3" /> },
+      { label: "Project Milestones Delivered", value: "6+", icon: <Target className="h-3 w-3" /> }
+    ]
+  },
+  {
+    id: "microsoft-azure",
+    role: "Microsoft Azure Intern",
+    company: "AICTE",
+    duration: "January 2026 – February 2026",
+    location: "New Delhi, India",
+    type: "Internship",
+    description: [
+      "Successfully completed a 4-week internship on Microsoft Azure under Emerging Technologies through the Microsoft Elevate initiative in collaboration with AICTE.",
+      "Built practical understanding of core Azure services and cloud workflows, including deployment concepts and platform fundamentals.",
+      "Strengthened cloud problem-solving and industry readiness by working through structured internship tasks and guided learning modules."
+    ],
+    logo: "/logos/aicte.png",
+    logoAlt: "Microsoft Elevate Logo",
+    logoScale: "scale-100",
+    certificateLink: "https://drive.google.com/file/d/19vza7SUuCBXRibjhZ4yekorCVMHVgdL7/view?usp=sharing",
+
+    metrics: [
+      { label: "Azure Modules Completed", value: "8+", icon: <TrendingUp className="h-3 w-3" /> },
+      { label: "Hands-on Labs Finished", value: "10+", icon: <Zap className="h-3 w-3" /> },
+      { label: "Cloud Workflow Mastery", value: "30%", icon: <Target className="h-3 w-3" /> }
+    ]
+  },
+  {
     id: "jio",
     role: "Mern Stack Intern",
-    company: "Webstack Academy",
+    company: "WebStack",
     duration: "Decemeber 2025 – January 2026",
-    location: "Banglore, Karnataka, India",
+    location: "Karnataka, India",
     type: "Internship",
     description: [
       "Constructed a full-stack Music Player Web Application with secure JWT-based authentication, playlist management, search functionality, profile, favorites, and real-time music playback features, improving user interaction efficiency by 30%.",
       "Established 10+ RESTful APIs for user authentication and song management, reducing response time by 25%, ensuring secure data handling for multiple concurrent users, and delivering a responsive frontend.",
       "Collaborated with the development team to and maintain MERN stack applications, supporting backend APIs, deploying updates, and resolving 5+ production issues to ensure smooth and stable system operation.",
-      "Tech: React.js, Node.js, MongoDB, Express.js, REST API"
+     // "Tech: React.js, Node.js, MongoDB, Express.js, REST API"
     ],
     logo: "/logos/wsa.jpg",
     logoAlt: "Webstack Logo",
+    logoScale: "scale-110",
+    certificateLink: "https://drive.google.com/file/d/1fLFENEGV_JhrDNJOYmHFrnXDDVRY1Zbf/view?usp=sharing",
     metrics: [
       { label: "APIs Created", value: "10+", icon: <TrendingUp className="h-3 w-3" /> },
       { label: "Response Time Reduced", value: "25%", icon: <Zap className="h-3 w-3" /> },
@@ -42,10 +90,12 @@ const experiences = [
       "Finished web development training and managed 5+ client websites using WordPress, performing customization, plugin integration, content updates, and routine maintenance to ensure reliable performance.",
       "Enhanced user experience by implementing responsive design improvements, optimizing layouts, and reducing page load time by 20%, ensuring seamless cross-device compatibility across desktop and mobile platforms.",
       "Collaborated with the development team to and maintain MERN stack applications, supporting backend APIs, deploying updates, and resolving 5+ production issues to ensure smooth and stable system operation.",
-      "Tech: WordPress, React.js, Node.js, MongoDB, Express.js, PHP, UI/UX, Plugin Integration"
+      //"Tech: WordPress, React.js, Node.js, MongoDB, Express.js, PHP, UI/UX, Plugin Integration"
     ],
     logo: "/logos/vanillakart.png",
     logoAlt: "Vanillakart Logo",
+    logoScale: "scale-125",
+    certificateLink: "https://drive.google.com/file/d/1vtDVhzR5663f2rlDDAMh0TmNtnTz0_Ex/view?usp=sharing",
     metrics: [
       { label: "Client Websites Managed", value: "5+", icon: <Target className="h-3 w-3" /> },
       { label: "Page Load Time Reduced", value: "20%", icon: <TrendingUp className="h-3 w-3" /> },
@@ -131,7 +181,7 @@ export function ExperienceSection() {
           transition={{ delay: 0.3 }}
           className="flex justify-center mb-8"
         >
-          <div className="flex gap-1 p-1 rounded-xl border bg-card/50 backdrop-blur-sm">
+          <div className="flex p-1 rounded-xl border border-border/80 bg-card/50 backdrop-blur-sm divide-x divide-border/80">
             {experiences.map((exp) => (
               <button
                 key={exp.id}
@@ -139,23 +189,19 @@ export function ExperienceSection() {
                   // Prevent rapid repeated clicks
                   setTimeout(() => setActiveExperience(exp), 50)
                 }}
-                className={`relative flex items-center gap-3 px-6 py-3 rounded-lg text-sm font-medium transition-colors duration-150 focus:outline-none ${
+                className={`relative flex items-center gap-3 px-4 sm:px-5 py-3 rounded-lg text-sm sm:text-base font-medium transition-colors duration-150 focus:outline-none ${
                   activeExperience.id === exp.id
                     ? 'bg-primary text-primary-foreground shadow-lg pointer-events-none'
                     : 'text-muted-foreground hover:text-foreground hover:bg-card/80'
                 }`}
               >
-                <div className={`relative h-6 w-6 rounded-lg border p-1 transition-all duration-300 ${
-                  activeExperience.id === exp.id 
-                    ? 'bg-primary-foreground/20 border-primary-foreground/30' 
-                    : 'bg-background/50 border-border'
-                }`}>
+                <div className="relative h-6 w-6 sm:h-7 sm:w-7 transition-all duration-300">
                   <Image
                     src={exp.logo}
                     alt={exp.logoAlt}
                     fill
-                    sizes="24px"
-                    className="object-contain"
+                    sizes="28px"
+                    className={`object-contain ${exp.logoScale}`}
                   />
                 </div>
                 <span className="hidden sm:inline font-medium">{exp.company}</span>
@@ -188,41 +234,41 @@ export function ExperienceSection() {
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3 }}
             >
-              <Card className="border bg-card/50 backdrop-blur-sm">
+              <Card className="group h-full hover:shadow-xl transition-all duration-400 border-primary/20 bg-gradient-to-br from-card to-muted/30 backdrop-blur-sm overflow-hidden">
                 <CardHeader className="pb-6">
                   <div className="flex flex-col sm:flex-row sm:items-start gap-6">
                     {/* Company Logo */}
                     <div className="flex-shrink-0">
-                      <div className="relative h-16 w-16 rounded-xl border bg-background/50 p-3">
+                      <div className="relative h-14 w-14 sm:h-16 sm:w-16">
                         <Image
                           src={activeExperience.logo}
                           alt={activeExperience.logoAlt}
                           fill
                           sizes="64px"
-                          className="object-contain"
+                          className={`object-contain ${activeExperience.logoScale}`}
                         />
                       </div>
                     </div>
                     
                     {/* Role Info */}
                     <div className="flex-1 min-w-0">
-                      <div className="flex flex-wrap items-center gap-3 mb-3">
-                        <Badge variant="secondary" className="text-xs">
+                      <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-3">
+                        <Badge variant="secondary" className="text-xs sm:text-sm">
                           {activeExperience.type}
                         </Badge>
-                        <div className="flex items-center gap-1 text-xs text-muted-foreground">
-                          <Calendar className="h-3 w-3" />
+                        <div className="flex items-center gap-1 text-xs sm:text-sm text-muted-foreground">
+                          <Calendar className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
                           {activeExperience.duration}
                         </div>
-                        <div className="flex items-center gap-1 text-xs text-muted-foreground">
-                          <MapPin className="h-3 w-3" />
+                        <div className="flex items-center gap-1 text-xs sm:text-sm text-muted-foreground">
+                          <MapPin className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
                           {activeExperience.location}
                         </div>
                       </div>
-                      <CardTitle className="text-xl font-semibold tracking-tight mb-1">
+                      <CardTitle className="text-xl sm:text-2xl font-semibold tracking-tight mb-1">
                         {activeExperience.role}
                       </CardTitle>
-                      <p className="text-base font-medium text-muted-foreground">
+                      <p className="text-base sm:text-lg font-medium text-muted-foreground">
                         {activeExperience.company}
                       </p>
                     </div>
@@ -240,7 +286,7 @@ export function ExperienceSection() {
                           initial={{ opacity: 0, scale: 0.9 }}
                           animate={{ opacity: 1, scale: 1 }}
                           transition={{ delay: 0.1 + i * 0.1 }}
-                          className="flex items-center gap-2 p-3 rounded-lg border bg-card/30 backdrop-blur-sm"
+                          className="flex items-center gap-2 p-3 rounded-lg border border-primary/20 bg-gradient-to-br from-card to-muted/30 backdrop-blur-sm hover:shadow-xl transition-all duration-400"
                         >
                           <div className="flex items-center justify-center w-8 h-8 rounded-md bg-primary/10 text-primary">
                             {metric.icon}
@@ -269,6 +315,19 @@ export function ExperienceSection() {
                       ))}
                     </ul>
                   </div>
+
+                  {activeExperience.certificateLink && (
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="w-full sm:w-auto justify-center sm:justify-start gap-2 border-primary/30 hover:bg-primary/10 hover:border-primary/50 transition-all"
+                      asChild
+                    >
+                      <a href={activeExperience.certificateLink} target="_blank" rel="noopener noreferrer">
+                        View Internship Certificate <ExternalLink className="h-3.5 w-3.5" />
+                      </a>
+                    </Button>
+                  )}
                 </CardContent>
               </Card>
             </motion.div>
