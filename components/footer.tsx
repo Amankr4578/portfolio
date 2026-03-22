@@ -13,9 +13,11 @@ const getIstTime = () =>
   }).format(new Date())
 
 export function Footer() {
-  const [istTime, setIstTime] = useState(getIstTime())
+  const [istTime, setIstTime] = useState("")
 
   useEffect(() => {
+    setIstTime(getIstTime())
+
     const timer = setInterval(() => {
       setIstTime(getIstTime())
     }, 1000)
@@ -44,7 +46,8 @@ export function Footer() {
           <p className="text-sm text-muted-foreground">Local time: {istTime} IST</p> */}
         </div>
 
-        <p className="text-center text-sm text-muted-foreground">Phagwara, Punjab {istTime} IST
+        <p className="text-center text-sm text-muted-foreground" suppressHydrationWarning>
+          Phagwara, Punjab {istTime ? `${istTime} IST` : "IST"}
         </p>
 
         <div className="flex flex-col items-center text-center md:items-end md:text-right">

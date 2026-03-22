@@ -18,16 +18,16 @@ export const projectsData = [
   challenges: "Major challenges included designing a large multi-module app (user, admin, analytics, rewards), securing role-based routes with JWT, managing consistent TypeScript data flow across frontend and backend, and keeping performance smooth while rendering analytics-heavy views." , 
   learnings: "This project strengthened my full-stack architecture skills using React + TypeScript + Express, taught me practical JWT + bcrypt authentication and RBAC implementation, improved API design/documentation with Swagger, and gave me hands-on experience integrating AI and analytics into a production-style marketplace." ,
   stack: [ "React" , "TypeScript" , "Express" , "Node.js" , "SQLite" , "JWT" , "bcryptjs" , "Framer Motion" , "Recharts" , "Google Gemini API" , "RenderForest" ] , 
-    image: "/images/MultiCloud.png", 
+    image: "/images/eco.png", 
     screenshots: [
-       "/images/MultiCloud.png",
-       "/images/MultiCloud2.png",
-       "/images/MultiCloud3.png",
-       "/images/MultiCloud4.png",
-       "/images/MultiCloud5.png",
+       "/images/eco.png",
+       "/images/eco1.png",
+       "/images/eco2.png",
+       "/images/eco3.png",
+       "/images/eco4.png",
        ],
     githubUrl: "https://github.com/Amankr4578/Ecobazaarx.git",
-    liveUrl: "https://taskprism.streamlit.app/", 
+    liveUrl: "https://ecobazaarx.vercel.app/", 
     slug: "ecobazaarx"     
     },
    {
@@ -40,14 +40,14 @@ export const projectsData = [
   image: "/images/skill.png",
   screenshots: [
     "/images/skill.png",
-    "/images/oculusai_ss2.png",
-    "/images/oculusai_ss3.png",
-    "/images/oculusai_ss4.png",
-    "/images/oculusai_ss5.png",
+    "/images/skill1.png",
+    "/images/skill3.png",
+    "/images/skill4.png",
+    "/images/skill5.png",
    
   ],
   githubUrl: "https://github.com/Amankr4578/infosysSkillBridgeNGO.git",
-  liveUrl: "https://taskprism.streamlit.app/",
+  liveUrl: "https://skillbridgex-3oxd.onrender.com/",
   slug: "skillbridge"
 },
   {
@@ -58,14 +58,16 @@ export const projectsData = [
     challenges:"The main challenges were coordinating role-based flows for users and admins, implementing reliable pickup scheduling with map interactions, and keeping notification/status updates consistent between frontend and backend modules.",
     learnings:"This project improved my skills in building end-to-end MERN-style systems, implementing JWT-based authentication and protected routes, structuring scalable React components, and designing admin-oriented dashboards with clean data flow.",
     stack:["React","MongoDB","Node.js","Express","Mongoose","JWT","Tailwind CSS","Framer Motion","Leaflet"],
-    image: "/images/echodb.png",
+    image: "/images/syn.png",
     screenshots: [
-      "/images/echodbss1.png",
-      "/images/echodbss2.png",
-      "/images/echodbss3.png"
+      "/images/syn.png",
+      "/images/syn1.png",
+      "/images/syn2.png",
+      "/images/syn3.png",
+      "/images/syn4.png"
     ],
     githubUrl: "https://github.com/Amankr4578/ecoSync.git",
-    liveUrl: "https://taskprism.streamlit.app/",
+    // liveUrl: "https://taskprism.streamlit.app/",
     slug: "ecosync"
   },
   {
@@ -75,14 +77,16 @@ export const projectsData = [
     challenges:"Key challenges included cleaning noisy agricultural data (nulls, duplicates, outliers), comparing many ML algorithms fairly, tuning models for consistent accuracy, and integrating prediction, disease analysis, and profit calculation into a single usable workflow.",
     learnings:"This project improved my end-to-end ML pipeline skills: data preprocessing, EDA, statistical testing, model benchmarking, and deployment-focused model selection. I also gained practical experience in combining ML and DL modules into one applied agriculture use case.",
     stack:["Python","Scikit-learn","TensorFlow","Pandas","NumPy","Matplotlib","Seaborn","Gradio"],
-    image: "/images/taskprism.png",
+    image: "/images/crop.png",
     screenshots: [
-      "/images/taskprismss1.png",
-      "/images/taskprismss2.png",
-      "/images/taskprismss3.png"
+      "/images/crop.png",
+      "/images/crop1.jpg",
+      "/images/crop2.jpg",
+      "/images/crop3.jpg",
+      "/images/crop4.png"
     ],
     githubUrl: "https://github.com/Amankr4578/crop-recommendation-system.git",
-    liveUrl: "https://taskprism.streamlit.app/",
+    // liveUrl: "https://taskprism.streamlit.app/",
     slug: "crop-recommendation-system"
   },
   {
@@ -92,12 +96,16 @@ export const projectsData = [
     challenges:"Key challenges included implementing consistent security across authentication and file actions, handling encrypted binary file workflows safely, and supporting both local database mode and Vercel deployment constraints (in-memory SQLite behavior).",
     learnings:"This project improved my practical skills in backend security design, bcrypt-based password protection, cryptographic file handling with Fernet, and API route design for file lifecycle operations like upload, download, encryption, and deletion.",
     stack:["Python","Tkinter","SQLite","bcrypt","cryptography (Fernet)","Flask","Flask-CORS","Vercel"],
-    image: "/images/gasdetector.jpg",
+    image: "/images/sec.png",
     screenshots: [
-      "/images/gasdetectorss1.jpg"
+      "/images/sec.png",
+      "/images/sec1.png",
+      "/images/sec2.png",
+      "/images/sec3.png",
+      "/images/sec4.png"
     ],
     githubUrl: "https://github.com/Amankr4578/Secure-File-Management-System.git",
-    liveUrl: "https://taskprism.streamlit.app/",
+    liveUrl: "https://secure-file-management-system.vercel.app/",
     slug: "secure-file-management-system"
   },
   {
@@ -107,11 +115,11 @@ export const projectsData = [
     challenges:"The main challenges were designing prompts that produce reliable, structured outputs across different languages and debug modes, formatting AI responses clearly for end users, and keeping the UI responsive while processing longer code analyses.",
     learnings:"This project improved my skills in prompt engineering, AI-assisted developer tooling, and building practical debugging workflows with mode-specific analysis. I also gained experience in creating user-friendly interaction layers for both Tkinter desktop and Flask web delivery.",
     stack:["Python","Tkinter","Flask","Google Gemini API","Bootstrap","HTML/CSS","JavaScript"],    
-    image: "/images/sm.png",
+    image: "/images/code.png",
     screenshots: [
-      "/images/sm.png",
-      "/images/smss1.png"
-      
+      "/images/code.png",
+      "/images/code1.png",
+      "/images/code2.png",
     ],
     githubUrl: "https://github.com/Amankr4578/code-debugger.git",
     liveUrl: "https://code-debugger-shashwat-kashyaps-projects.vercel.app/",
@@ -124,11 +132,12 @@ export const projectsData = [
     challenges:"The main challenges were coordinating frontend player state across many controls, handling secure JWT-based auth flows with profile and password reset features, and maintaining clean integration between Jamendo song data and MongoDB-backed user favorites.",
     learnings:"This project strengthened my MERN architecture skills, especially Redux state management for media controls, robust Express route structuring for auth and songs, and practical secure user-flow design using JWT, bcrypt, and email-based reset logic.",
     stack:["React","Redux Toolkit","Tailwind CSS","Node.js","Express","MongoDB","Mongoose","JWT","bcrypt","Nodemailer","Jamendo API"],
-    image: "/images/oculusai_ss1.png",
+    image: "/images/mus.png",
     screenshots: [
-      "/images/oculusai_ss1.png",
-      "/images/oculusai_ss2.png",
-      "/images/oculusai_ss3.png"
+      "/images/mus.png",
+      "/images/mus2.png",
+      "/images/mus3.png",
+      "/images/mus4.png"
     ],
     githubUrl: "https://github.com/Amankr4578/wsa-synthesia-app.git",
     liveUrl: "https://wsa-synthesia-app.netlify.app/",
@@ -141,11 +150,13 @@ export const projectsData = [
     challenges:"The core challenges were designing clear role-based experiences across two portals, maintaining reliable data consistency between universities, departments, courses, and students, and building reporting/analytics views that remain fast and readable as records scale.",
     learnings:"This project improved my backend and system-design skills in PHP, especially session-based authentication, modular API structuring, SQL schema planning, and dashboard-focused data aggregation. I also strengthened frontend implementation using Tailwind-driven responsive UI for admin workflows.",
     stack:["PHP","MySQL","JavaScript","CSS","Tailwind CSS","HTML","Chart.js","XAMPP/Apache"],
-    image: "/images/me.jpeg",
+    image: "/images/edu.png",
     screenshots: [
-      "/images/me.jpeg",
-      "/images/MultiCloud1.png",
-      "/images/taskprismss1.png"
+      "/images/edu.png",
+      "/images/edu1.png",
+      "/images/edu2.png",
+      "/images/edu3.png",
+      "/images/edu4.png"
     ],
     githubUrl: "https://github.com/Amankr4578/Government-University-Portal.git",
     liveUrl: "",
@@ -164,6 +175,14 @@ export function ProjectsSection() {
   const scrollContainerRef = useRef<HTMLDivElement>(null)
   const [showLeftArrow, setShowLeftArrow] = useState(false)
   const [showRightArrow, setShowRightArrow] = useState(true)
+
+  const getInlineStack = (stack: string[]) => {
+    const maxVisible = 2
+    const visible = stack.slice(0, maxVisible)
+    const moreCount = Math.max(stack.length - maxVisible, 0)
+
+    return { visible, moreCount }
+  }
 
   const checkScroll = () => {
     if (scrollContainerRef.current) {
@@ -261,6 +280,9 @@ export function ProjectsSection() {
           }}
         >
           {projectsData.map((project, index) => (
+            (() => {
+              const inlineStack = getInlineStack(project.stack)
+              return (
             <motion.div 
               key={index} 
               variants={fadeInUp}
@@ -289,15 +311,15 @@ export function ProjectsSection() {
                   </p>
                 </CardHeader>
                 <CardContent className="p-3 sm:p-6 pt-0 sm:pt-0">
-                  <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
-                    {project.stack.slice(0, 3).map((tech) => (
-                      <Badge key={tech} variant="secondary" className="text-xs">
+                  <div className="flex items-center gap-1.5 sm:gap-2 mb-3 sm:mb-4 flex-nowrap overflow-hidden whitespace-nowrap">
+                    {inlineStack.visible.map((tech) => (
+                      <Badge key={tech} variant="secondary" className="text-xs shrink-0">
                         {tech}
                       </Badge>
                     ))}
-                    {project.stack.length > 3 && (
-                      <Badge variant="secondary" className="text-xs">
-                        +{project.stack.length - 3} more
+                    {inlineStack.moreCount > 0 && (
+                      <Badge variant="secondary" className="text-xs shrink-0">
+                        +{inlineStack.moreCount} more
                       </Badge>
                     )}
                   </div>
@@ -311,7 +333,7 @@ export function ProjectsSection() {
                         </Button>
                       )}
                       {project.liveUrl && (
-                        <Button size="sm" className="flex-1 text-xs sm:text-sm" asChild onClick={(e) => e.stopPropagation()}>
+                        <Button variant="outline" size="sm" className="flex-1 text-xs sm:text-sm" asChild onClick={(e) => e.stopPropagation()}>
                           <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                             <ExternalLink className="mr-1.5 sm:mr-2 h-3.5 w-3.5 sm:h-4 sm:w-4" /> Live Link
                           </a>
@@ -333,6 +355,8 @@ export function ProjectsSection() {
                 </CardContent>
               </Card>
             </motion.div>
+              )
+            })()
           ))}
         </div>
       </div>

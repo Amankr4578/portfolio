@@ -131,7 +131,7 @@ export function HeroSection() {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/10 rounded-full blur-xl" />
               <Image
-                src="/images/me.jpeg"
+                src="/images/me1.jpeg"
                 alt="Aman Kumar"
                 width={240}
                 height={240}
